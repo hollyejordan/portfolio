@@ -13,7 +13,6 @@ export default function Home() {
           height={38}
           priority
         />
-        <h1>Hello World!</h1>
         <ol>
           <li>
             Get started by editing <code>app/page.tsx</code>.
