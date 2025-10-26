@@ -1,6 +1,21 @@
 .navbar {
-
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     background-color: rgb(93, 138, 163);
-    height: 50px;
+    position: relative;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    text-decoration: none;
     color: white;
+    padding: 16px;
+    transition: 0.2s;
+}
+
+
+
+.navbar a:hover {
+    background: rgb(71, 105, 124);
 }

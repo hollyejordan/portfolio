@@ -1,6 +1,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --text-primary: #000;
+  --text-secondary: #666;
+
+  --underneath-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 

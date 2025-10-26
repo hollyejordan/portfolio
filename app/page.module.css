@@ -2,9 +2,6 @@
   --background: #fafafa;
   --foreground: #fff;
 
-  --text-primary: #000;
-  --text-secondary: #666;
-
   min-height: 100vh;
   background-color: var(--background);
   display: flex;
@@ -25,11 +22,6 @@
   justify-items: center;
   text-align: center;
   gap: 16px;
-  /* display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  text-align: center; */
 }
 
 .pfpContainer {
@@ -38,12 +30,11 @@
   max-width: 280px;
   aspect-ratio: 1;
   display: flex;
-  
 }
 
 .pfp {
-
   border-radius: 50%;
+  box-shadow: var(--underneath-box-shadow);
 }
 
 .intro h1 {
