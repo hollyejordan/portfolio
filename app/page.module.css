@@ -60,11 +60,6 @@
   color: var(--text-secondary);
 }
 
-@media (min-width: 541) {
-  
-  
-}
-
 @media (min-width: 721px) {
   
   .intro {
@@ -73,13 +68,7 @@
     line-height: 32px;
     gap: 0;
   }
-
-  .intro p {
-
-    font-size: 20px;
-    line-height: 32px;
-  }
-
+  
   .pfpContainer {
     min-width: 234px;
     align-self: center;
