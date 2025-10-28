@@ -51,23 +51,6 @@
   color: var(--text-secondary);
 }
 
-.contactButton {
-    background-color: var(--primary-colour);
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    color: white;
-    padding: 10px 10px;
-    transition: 0.2s;
-    margin-top: var(--spacing);
-    display: inline-block;
-    border-radius: 5px;
-}
-
-.contactButton:hover {
-    background: var(--secondary-colour);
-    box-shadow: none;
-}
-
 @media (min-width: 721px) {
   
   .intro {
@@ -80,9 +63,5 @@
   .pfpContainer {
     min-width: 234px;
     align-self: center;
-  }
-
-  .contactButton {
-    padding: 5px 10px;
   }
 }
