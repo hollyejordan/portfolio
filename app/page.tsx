@@ -4,24 +4,24 @@ import LinkButton from "./components/LinkButton/LinkButton";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <div className={styles.intro}>
-          <div className={styles.pfpContainer}>
-            <Image
-              className={styles.pfp}
-              src="/profile-pic.jpg"
-              fill
-              alt="Portrait of the author"
-            />
-          </div>
-          <div>
-            <h1>Hi, I'm Holly.</h1>
-            <p>Recent computing graduate with a passion for developing software and web applications. Experienced in collaborative and independent projects, including full stack web technologies and embedded IoT systems. Eager to contribute to a development team and grow through industry experience.</p>
-            <LinkButton path="/contact" innerText="Contact Me"></LinkButton>
+      <main>
+        <div className="page">
+          <div className={styles.intro}>
+            <div className={styles.pfpContainer}>
+              <Image
+                className={styles.pfp}
+                src="/profile-pic.jpg"
+                fill
+                alt="Portrait of the author"
+              />
+            </div>
+            <div>
+              <h1>Hi, I'm Holly.</h1>
+              <p>Recent computing graduate with a passion for developing software and web applications. Experienced in collaborative and independent projects, including full stack web technologies and embedded IoT systems. Eager to contribute to a development team and grow through industry experience.</p>
+              <LinkButton path="/contact" innerText="Contact Me"></LinkButton>
+            </div>
           </div>
         </div>
       </main>
-    </div>
   );
 }
