@@ -18,20 +18,6 @@
   box-shadow: var(--underneath-box-shadow);
 }
 
-.intro h1 {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -1.4px;
-  color: var(--text-primary);
-}
-
-.intro p {
-  font-size: 18px;
-  text-wrap: balance;
-  color: var(--text-secondary);
-}
-
 @media (min-width: 721px) {
   
   .intro {

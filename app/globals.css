@@ -41,6 +41,20 @@ main {
   padding: 48px 24px;
 }
 
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+}
+
+p {
+  font-size: 18px;
+  text-wrap: balance;
+  color: var(--text-secondary);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
