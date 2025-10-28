@@ -12,7 +12,10 @@
 
   --underneath-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 
+  --rounded-edge: 4px;
+
   --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --small-font: 18px;
 
   font-family: var(--font);
 }
@@ -52,7 +55,7 @@ h1 {
 }
 
 p {
-  font-size: 18px;
+  font-size: var(--small-font);
   text-wrap: balance;
   color: var(--text-secondary);
 }
