@@ -4,7 +4,6 @@
     text-decoration: none;
     color: white;
     padding: 10px 10px;
-    transition: 0.2s;
     margin-top: var(--spacing);
     display: inline-block;
     border-radius: 5px;
@@ -19,5 +18,6 @@
 
   .button {
     padding: 5px 10px;
+    transition: 0.2s;
   }
 }
