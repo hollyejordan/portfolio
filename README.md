@@ -1,5 +1,5 @@
 # Holly Jordan Portfolio
-This is my personal portfolio website built with Next.js and pure CSS.
+This is my personal portfolio website built with Next.js and pure CSS. It is currently still under development, but please feel free to take a look.
 
 ## Tech Stack
 - [Next.js](https://nextjs.org/)
