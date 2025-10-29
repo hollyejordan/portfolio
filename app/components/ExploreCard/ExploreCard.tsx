@@ -5,6 +5,8 @@ type ExploreCardProps = {
 }
 
 export default function ExploreCard({ title }: ExploreCardProps) {
+
+
   return (
     <div className={`${styles.exploreCard} thinBorderBox`}>
         <div>
