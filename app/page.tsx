@@ -12,6 +12,7 @@ export default function Home() {
             className={styles.pfp}
             src="/profile-pic.jpg"
             fill
+            
             alt="Portrait of the author"
           />
         </div>
@@ -26,7 +27,7 @@ export default function Home() {
         <h2>Take a look around</h2>
         <div className={styles.exploreCards}>
           <ExploreCard title="About" path="/about" thumbnail="" description="Learn more about who I am and what drives me."/>
-          <ExploreCard title="Projects" path="/projects" thumbnail="/projects-thumbnail.png" description="Explore some of the projects I've built and what I've learned from them."/>
+          <ExploreCard title="Projects" path="/projects" thumbnail="/projects-thumbnail-60.png" description="Explore some of the projects I've built and what I've learned from them."/>
           <ExploreCard title="Resume" path="/resume" thumbnail="" description="See my experience, skills and education."/>
           <ExploreCard title="Contact" path="/contact" thumbnail="" description="I'd love to hear from you - feel free to reach out with any questions!"/>
         </div>
