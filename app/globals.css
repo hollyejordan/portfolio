@@ -68,7 +68,7 @@ p {
   width: 100%;
   max-width: 1024px;
   background-color: var(--foreground);
-  padding: 48px 24px;
+  padding: 48px;
 }
 
 .button {

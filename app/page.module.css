@@ -3,6 +3,7 @@
   justify-items: center;
   text-align: center;
   gap: var(--spacing);
+  margin-bottom: 50px
 }
 
 .pfpContainer {
@@ -18,10 +19,6 @@
   box-shadow: var(--underneath-box-shadow);
 }
 
-.exploreSection {
-  margin-top: 100px;
-}
-
 .exploreCards {
   display: grid;
   grid-template-columns: 1fr;
@@ -30,8 +27,9 @@
 
 @media (min-width: 540px) {
 
-  .exploreCards {
-    grid-template-columns: 1fr 1fr;
+  .intro {
+
+    margin-bottom: 100px;
   }
 }
 
@@ -42,6 +40,7 @@
     text-align: left;
     line-height: 32px;
     gap: 0;
+    margin: 100px 0;
   }
 
   .intro a {
@@ -54,6 +53,6 @@
   }
 
   .exploreCards {
-    grid-template-columns: 1fr 1fr 1fr;
-  } 
+    grid-template-columns: 1fr 1fr;
+  }
 }

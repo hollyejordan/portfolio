@@ -1,8 +1,9 @@
 .exploreCard {
+    --exploreCardHeight: 220px;
     display: flex;
     flex-direction: column;
     position: relative;
-    min-height: 200px;
+    min-height: var(--exploreCardHeight);
     width: 100%;
     justify-content: space-between;
     padding: 0;
@@ -42,6 +43,7 @@
 .expandable p {
     padding-top: var(--spacing);
     flex: 1;
+    text-wrap: wrap;
 }
 
 .expandable a {
@@ -53,7 +55,7 @@
 .exploreCard:hover .expandable {
     height: 100%;
     border-radius: 3px;
-    max-height: 200px;
+    max-height: var(--exploreCardHeight);
 }
 
 .exploreCard:hover .expandable *:not(h3) {

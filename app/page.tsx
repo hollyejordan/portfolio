@@ -28,6 +28,7 @@ export default function Home() {
           <ExploreCard title="About" path="/about" thumbnail="" description="Learn more about who I am and what drives me."/>
           <ExploreCard title="Projects" path="/projects" thumbnail="/projects-thumbnail.png" description="Explore some of the projects I've built and what I've learned from them."/>
           <ExploreCard title="Resume" path="/resume" thumbnail="" description="See my experience, skills and education."/>
+          <ExploreCard title="Contact" path="/contact" thumbnail="" description="I'd love to hear from you - feel free to reach out with any questions!"/>
         </div>
       </div>
     </>
