@@ -12,7 +12,10 @@ export default function ExploreCard({ title }: ExploreCardProps) {
         <div>
           image section
         </div>
-        <h3>{title}</h3>
+        <div className={styles.expandable}>
+          <h3>{title}</h3>
+          <p>This is a short description of what this page is.</p>
+        </div>
     </div>
   );
 }
