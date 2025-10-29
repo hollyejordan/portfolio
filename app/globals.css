@@ -8,6 +8,7 @@
   --text-primary: #000;
   --text-secondary: #666;
 
+  --small-spacing: 10px;
   --spacing: 16px;
 
   --underneath-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
@@ -76,7 +77,7 @@ p {
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   color: white;
-  padding: 10px;
+  padding: var(--small-spacing);
   transition: 0.2s;
   border-radius: var(--rounded-edge);
   margin-top: var(--spacing);
@@ -97,6 +98,6 @@ p {
 @media (min-width: 721px) {
 
   .button {
-    padding: 5px 10px;
+    padding: 5px var(--small-spacing);
   }
 }

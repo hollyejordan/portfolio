@@ -1,9 +1,17 @@
-
-
 .exploreCard {
     display: flex;
     flex-direction: column;
     min-height: 200px;
     width: 100%;
     justify-content: space-between;
+}
+
+.exploreCard {
+    padding: 0;
+}
+
+.exploreCard h3 {
+    background-color: var(--primary-colour);
+    padding: var(--small-spacing);
+    color: white;
 }

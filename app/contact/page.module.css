@@ -23,7 +23,7 @@
 .form button {
     border: 1px solid var(--primary-colour);
     border-radius: var(--rounded-edge);
-    padding: 10px 10px;
+    padding: var(--small-spacing);
     margin-top: 2px;
 }
 
