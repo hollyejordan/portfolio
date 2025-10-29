@@ -1,9 +1,16 @@
 import styles from "./ExploreCard.module.css"
 
-export default function NavBar() {
+type ExploreCardProps = {
+  title: string;
+}
+
+export default function ExploreCard({ title }: ExploreCardProps) {
   return (
     <div className={`${styles.exploreCard} thinBorderBox`}>
-        <p>Explore Card</p>
+        <div>
+          image section
+        </div>
+        <h3>{title}</h3>
     </div>
   );
 }

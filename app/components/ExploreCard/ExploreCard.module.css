@@ -1,5 +1,9 @@
 
 
 .exploreCard {
+    display: flex;
+    flex-direction: column;
     min-height: 200px;
+    width: 100%;
+    justify-content: space-between;
 }

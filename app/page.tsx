@@ -21,10 +21,15 @@ export default function Home() {
           <LinkButton path="/contact" innerText="Contact Me"></LinkButton>
         </div>
       </div>
+      
+      
       <div className={styles.exploreSection}>
-        <ExploreCard />
-        <ExploreCard />
-        <ExploreCard />
+        <h2>Take a look around</h2>
+        <div className={styles.exploreCards}>
+          <ExploreCard title="About"/>
+          <ExploreCard title="Projects"/>
+          <ExploreCard title="Resume"/>
+        </div>
       </div>
     </>
   );
