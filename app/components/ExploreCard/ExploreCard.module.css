@@ -44,6 +44,12 @@
     flex: 1;
 }
 
+.expandable a {
+    --primary-colour: rgb(71, 105, 124);
+    --secondary-colour: rgb(61, 91, 109);
+    text-align: center;
+}
+
 .exploreCard:hover .expandable {
     height: 100%;
     border-radius: 3px;

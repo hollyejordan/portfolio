@@ -43,6 +43,10 @@
     line-height: 32px;
     gap: 0;
   }
+
+  .intro a {
+    padding: 5px var(--small-spacing);
+  }
   
   .pfpContainer {
     min-width: 234px;

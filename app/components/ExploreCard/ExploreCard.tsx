@@ -11,7 +11,6 @@ type ExploreCardProps = {
 
 export default function ExploreCard({ title, path, thumbnail, description }: ExploreCardProps) {
 
-
   return (
     <div className={`${styles.exploreCard} thinBorderBox`}>
         <Image
@@ -23,7 +22,7 @@ export default function ExploreCard({ title, path, thumbnail, description }: Exp
         <div className={styles.expandable}>
           <h3>{title}</h3>
           <p>{description}</p>
-          <LinkButton classes="takeMeThereButton" path={path} innerText="Take me there"></LinkButton>
+          <LinkButton path={path} innerText="Take me there"></LinkButton>
         </div>
     </div>
   );

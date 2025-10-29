@@ -18,7 +18,7 @@ export default function Home() {
         <div>
           <h1>Hi, I'm Holly.</h1>
           <p>I'm a recent computing graduate with a passion for developing software and web applications. I have experience working on collaborative and independent projects, including full stack web applications and embedded IoT systems. I'm eager to contribute to a development team and grow through industry experience.</p>
-          <LinkButton classes="contactButton" path="/contact" innerText="Contact Me"></LinkButton>
+          <LinkButton path="/contact" innerText="Contact Me"></LinkButton>
         </div>
       </div>
       

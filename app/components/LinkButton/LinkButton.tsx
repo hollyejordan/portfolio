@@ -1,6 +1,5 @@
 "use client"
 import Link from "next/link";
-import styles from "./LinkButton.module.css"
 
 type ButtonProps = {
   classes?: string;
@@ -11,6 +10,6 @@ type ButtonProps = {
 export default function LinkButton({ classes, path, innerText }: ButtonProps) {
 
   return (
-    <Link className={`${classes ? styles[classes] || classes : ""} button`} href={path}>{innerText}</Link>
+    <Link className="button" href={path}>{innerText}</Link>
   );
 }
