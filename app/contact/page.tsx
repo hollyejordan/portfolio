@@ -36,7 +36,7 @@ export default function Contact() {
           <textarea className={styles.message} name="message" />
         </label>
 
-        <button type="submit">Submit</button>
+        <button className="button" type="submit">Submit</button>
       </Form>
     </>
   );

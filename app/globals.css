@@ -68,10 +68,33 @@ p {
   padding: 48px 24px;
 }
 
-.thinBorderBox {
+.button {
+  display: inline-block;
+  background-color: var(--primary-colour);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  transition: 0.2s;
+  border-radius: var(--rounded-edge);
+  margin-top: var(--spacing);
+}
 
+.button:hover {
+    background: var(--secondary-colour);
+    box-shadow: none;
+}
+
+.thinBorderBox {
   border: 1px solid var(--primary-colour);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: var(--spacing);
+}
+
+@media (min-width: 721px) {
+
+  .button {
+    padding: 5px 10px;
+  }
 }

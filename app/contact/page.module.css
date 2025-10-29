@@ -39,16 +39,6 @@
     max-width: 100%;
 }
 
-.form button {
-    background-color: var(--primary-colour);
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    color: white;
-    margin-top: var(--spacing);
-    display: inline-block;
-    border: none;
-}
-
 .form button:hover {
     background: var(--secondary-colour);
     box-shadow: none;

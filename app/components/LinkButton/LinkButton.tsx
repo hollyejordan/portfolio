@@ -10,6 +10,8 @@ type ButtonProps = {
 export default function LinkButton({ path, innerText }: ButtonProps) {
 
   return (
-    <Link className={styles.button} href={path}>{innerText}</Link>
+    <Link className={`${styles.button} button`} href={path}>{innerText}</Link>
   );
 }
+
+{`${styles.form} thinBorderBox`}
