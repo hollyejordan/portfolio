@@ -5,11 +5,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    padding: var(--spacing);
     gap: var(--spacing);
-    border: 1px solid var(--primary-colour);
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
     margin-top: var(--spacing);
     font-size: var(--small-font);
     color: var(--secondary-colour);

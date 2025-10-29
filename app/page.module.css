@@ -18,6 +18,12 @@
   box-shadow: var(--underneath-box-shadow);
 }
 
+.exploreSection {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
 @media (min-width: 721px) {
   
   .intro {
