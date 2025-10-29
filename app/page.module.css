@@ -23,12 +23,19 @@
 }
 
 .exploreCards {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--spacing);
 }
 
-@media (min-width: 721px) {
+@media (min-width: 540px) {
+
+  .exploreCards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 720px) {
   
   .intro {
     grid-template-columns: 2fr 3fr;
@@ -41,4 +48,8 @@
     min-width: 234px;
     align-self: center;
   }
+
+  .exploreCards {
+    grid-template-columns: 1fr 1fr 1fr;
+  } 
 }
