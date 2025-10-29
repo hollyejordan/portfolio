@@ -1,4 +1,11 @@
-.desc {
+.notice {
+
+    color: red;
+    font-weight: bold;
+}
+
+.desc,
+.notice {
     text-wrap: wrap;
 }
 

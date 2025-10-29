@@ -19,7 +19,8 @@ export default function Contact() {
     <>
       <h1>Contact Me</h1>
       <p className={styles.desc}>Thanks for reaching out to me.</p>
-      <p className={styles.desc}>You can contact me by email at hollyjordan200202@gmail.com, or by filling out this short form.</p>
+      <p className={styles.desc}>You can contact me by email at hollyjordan200202@gmail.com or by filling out this short form.</p>
+      <p className={styles.notice}>Notice: This form is currently under development and is not fully implemented. Please contact me by email in the meantime.</p>
       <Form className={`${styles.form} thinBorderBox`} action={formAction}>
         <label>
           Name
