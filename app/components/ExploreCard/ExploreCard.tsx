@@ -4,9 +4,10 @@ import Image from "next/image";
 type ExploreCardProps = {
   title: string;
   thumbnail: string;
+  description: string;
 }
 
-export default function ExploreCard({ title, thumbnail }: ExploreCardProps) {
+export default function ExploreCard({ title, thumbnail, description }: ExploreCardProps) {
 
 
   return (
@@ -19,7 +20,7 @@ export default function ExploreCard({ title, thumbnail }: ExploreCardProps) {
           />
         <div className={styles.expandable}>
           <h3>{title}</h3>
-          <p>This is a short description of what this page is.</p>
+          <p>{description}</p>
         </div>
     </div>
   );

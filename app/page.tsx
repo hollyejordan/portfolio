@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <div>
           <h1>Hi, I'm Holly.</h1>
-          <p>Recent computing graduate with a passion for developing software and web applications. Experienced in collaborative and independent projects, including full stack web technologies and embedded IoT systems. Eager to contribute to a development team and grow through industry experience.</p>
+          <p>I'm a recent computing graduate with a passion for developing software and web applications. I have experience working on collaborative and independent projects, including full stack web applications and embedded IoT systems. I'm eager to contribute to a development team and grow through industry experience.</p>
           <LinkButton path="/contact" innerText="Contact Me"></LinkButton>
         </div>
       </div>
@@ -26,9 +26,9 @@ export default function Home() {
       <div className={styles.exploreSection}>
         <h2>Take a look around</h2>
         <div className={styles.exploreCards}>
-          <ExploreCard title="About"/>
-          <ExploreCard title="Projects" thumbnail="/projects-thumbnail.png"/>
-          <ExploreCard title="Resume"/>
+          <ExploreCard title="About" thumbnail="" description="Learn more about who I am and what drives me."/>
+          <ExploreCard title="Projects" thumbnail="/projects-thumbnail.png" description="Explore some of the projects I've built and what I've learned from them."/>
+          <ExploreCard title="Resume" thumbnail="" description="See my experience, skills and education."/>
         </div>
       </div>
     </>
