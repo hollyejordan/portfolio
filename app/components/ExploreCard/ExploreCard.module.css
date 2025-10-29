@@ -16,6 +16,8 @@
 }
 
 .expandable {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     bottom: 0;
     background-color: var(--primary-colour);
@@ -34,8 +36,8 @@
 }
 
 .expandable p {
-
     padding-top: var(--spacing);
+    flex: 1;
 }
 
 .exploreCard:hover .expandable {

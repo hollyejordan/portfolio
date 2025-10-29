@@ -94,10 +94,3 @@ p {
   border-radius: 5px;
   padding: var(--spacing);
 }
-
-@media (min-width: 721px) {
-
-  .button {
-    padding: 5px var(--small-spacing);
-  }
-}
