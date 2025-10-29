@@ -27,7 +27,7 @@ export default function Home() {
         <h2>Take a look around</h2>
         <div className={styles.exploreCards}>
           <ExploreCard title="About"/>
-          <ExploreCard title="Projects"/>
+          <ExploreCard title="Projects" thumbnail="/projects-thumbnail.png"/>
           <ExploreCard title="Resume"/>
         </div>
       </div>
