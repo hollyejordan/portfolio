@@ -51,7 +51,6 @@ h1, h2 {
 
 p {
   font-size: var(--small-font);
-  text-wrap: balance;
   color: var(--text-secondary);
 }
 

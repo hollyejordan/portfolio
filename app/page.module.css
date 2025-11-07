@@ -3,7 +3,8 @@
   justify-items: center;
   text-align: center;
   gap: var(--spacing);
-  margin-bottom: 50px
+  margin-bottom: 50px;
+  text-wrap: balance;
 }
 
 .pfpContainer {

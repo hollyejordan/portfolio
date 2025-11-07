@@ -3,6 +3,16 @@
     grid-template-columns: 2fr 1fr;
     width: 100%;
     margin: 20px 0;
+    gap: var(--spacing);
+    min-height: 220px;
+    text-decoration: none;
+    transition: 0.5s, opacity 0.5s ease;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .thumbnailContainer {
@@ -12,4 +22,9 @@
 .thumbnail {
     border-radius: 4px 4px 0 0;
     object-fit: cover;
+}
+
+.projectCard:hover {
+
+    background-color: rgb(236, 236, 236);
 }

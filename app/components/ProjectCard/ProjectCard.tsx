@@ -1,3 +1,4 @@
+import Link from "next/link";
 import LinkButton from "../LinkButton/LinkButton";
 import styles from "./ProjectCard.module.css";
 import Image from "next/image";
@@ -6,15 +7,19 @@ type ProjectCardProps = {
     title: string;
     path: string;
     thumbnail: string;
+    description: string;
 }
 
-export default function ProjectCard({ title, path, thumbnail }: ProjectCardProps) {
+export default function ProjectCard({ title, path, thumbnail, description }: ProjectCardProps) {
 
   return (
-    <div className={`${styles.projectCard} thinBorderBox`}>
-        <div>
-          <h3>{title}</h3>
-          <LinkButton path={path} innerText="Take me there"></LinkButton>
+    <Link href={path} className={`${styles.projectCard} thinBorderBox`}>
+        <div className={styles.intro}>
+            <div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </div>
+            
         </div>
         <div className={styles.thumbnailContainer}>
             <Image
@@ -24,7 +29,6 @@ export default function ProjectCard({ title, path, thumbnail }: ProjectCardProps
                 alt="Projects thumbnail"
             />
         </div>
-        
-    </div>
+    </Link>
   );
 }
