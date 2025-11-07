@@ -6,7 +6,6 @@
     gap: var(--spacing);
     min-height: 220px;
     text-decoration: none;
-    transition: 0.5s, opacity 0.5s ease;
 }
 
 .intro {

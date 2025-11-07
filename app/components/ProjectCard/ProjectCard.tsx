@@ -7,16 +7,18 @@ type ProjectCardProps = {
     title: string;
     path: string;
     thumbnail: string;
+    date: string;
     description: string;
 }
 
-export default function ProjectCard({ title, path, thumbnail, description }: ProjectCardProps) {
+export default function ProjectCard({ title, path, thumbnail, date, description }: ProjectCardProps) {
 
   return (
     <Link href={path} className={`${styles.projectCard} thinBorderBox`}>
         <div className={styles.intro}>
             <div>
                 <h3>{title}</h3>
+                <h4>{date}</h4>
                 <p>{description}</p>
             </div>
             <LinkButton path={path} innerText="Read More"></LinkButton>
