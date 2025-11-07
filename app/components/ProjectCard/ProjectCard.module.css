@@ -1,11 +1,21 @@
 .projectCard {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     width: 100%;
     margin: 20px 0;
     gap: var(--spacing);
     min-height: 220px;
     text-decoration: none;
+}
+
+.projectCard p {
+    margin-top: var(--small-spacing);
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
 }
 
 .thumbnailContainer {
@@ -15,6 +25,18 @@
 }
 
 .thumbnail {
-    border-radius: 4px 4px 0 0;
+    border-radius: var(--rounded-edge);
     object-fit: cover;
+}
+
+@media (min-width: 720px) {
+
+    .projectCard {
+        grid-template-columns: 1fr 2fr;
+        direction: rtl;
+    }
+
+    .intro {
+        direction: ltr;
+    }
 }
