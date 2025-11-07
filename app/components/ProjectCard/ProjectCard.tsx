@@ -19,7 +19,7 @@ export default function ProjectCard({ title, path, thumbnail, description }: Pro
                 <h3>{title}</h3>
                 <p>{description}</p>
             </div>
-            
+            <LinkButton path={path} innerText="Read More"></LinkButton>
         </div>
         <div className={styles.thumbnailContainer}>
             <Image

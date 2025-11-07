@@ -1,3 +1,4 @@
+import Link from "next/link";
 import LinkButton from "../LinkButton/LinkButton";
 import styles from "./ExploreCard.module.css";
 import Image from "next/image";
@@ -12,7 +13,7 @@ type ExploreCardProps = {
 export default function ExploreCard({ title, path, thumbnail, description }: ExploreCardProps) {
 
   return (
-    <div className={`${styles.exploreCard} thinBorderBox`}>
+    <Link href={path} className={`${styles.exploreCard} thinBorderBox`}>
         <Image
           className={styles.thumbnail}
           src={thumbnail}
@@ -24,6 +25,6 @@ export default function ExploreCard({ title, path, thumbnail, description }: Exp
           <p>{description}</p>
           <LinkButton path={path} innerText="Take me there"></LinkButton>
         </div>
-    </div>
+    </Link>
   );
 }
