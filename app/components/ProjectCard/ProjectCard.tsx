@@ -15,14 +15,6 @@ export default function ProjectCard({ title, path, thumbnail, date, description 
 
   return (
     <Link href={path} className={`${styles.projectCard} thinBorderBox`}>
-        <div className={styles.intro}>
-            <div>
-                <h3>{title}</h3>
-                <h4>{date}</h4>
-                <p>{description}</p>
-            </div>
-            <LinkButton path={path} innerText="Read More"></LinkButton>
-        </div>
         <div className={styles.thumbnailContainer}>
             <Image
                 className={styles.thumbnail}
@@ -30,6 +22,14 @@ export default function ProjectCard({ title, path, thumbnail, date, description 
                 fill
                 alt="Projects thumbnail"
             />
+        </div>
+        <div className={styles.intro}>
+            <div>
+                <h3>{title}</h3>
+                <h4>{date}</h4>
+                <p>{description}</p>
+            </div>
+            <LinkButton path={path} innerText="Read More"></LinkButton>
         </div>
     </Link>
   );
