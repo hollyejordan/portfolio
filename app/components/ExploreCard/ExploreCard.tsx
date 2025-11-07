@@ -1,5 +1,5 @@
 import LinkButton from "../LinkButton/LinkButton";
-import styles from "./ExploreCard.module.css"
+import styles from "./ExploreCard.module.css";
 import Image from "next/image";
 
 type ExploreCardProps = {
@@ -14,11 +14,11 @@ export default function ExploreCard({ title, path, thumbnail, description }: Exp
   return (
     <div className={`${styles.exploreCard} thinBorderBox`}>
         <Image
-        className={styles.thumbnail}
-            src={thumbnail}
-            fill
-            alt="Projects thumbnail"
-          />
+          className={styles.thumbnail}
+          src={thumbnail}
+          fill
+          alt="Projects thumbnail"
+        />
         <div className={styles.expandable}>
           <h3>{title}</h3>
           <p>{description}</p>
