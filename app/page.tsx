@@ -16,7 +16,6 @@ export default async function Home() {
             className={styles.pfp}
             src="/profile-pic.jpg"
             fill
-            
             alt="Portrait of the author"
           />
         </div>

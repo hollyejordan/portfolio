@@ -18,7 +18,7 @@ export default function ExploreCard({ title, path, thumbnail, description }: Exp
           className={styles.thumbnail}
           src={thumbnail}
           fill
-          alt="Projects thumbnail"
+          alt={`${title} project thumbnail`}
         />
         <div className={styles.expandable}>
           <h3>{title}</h3>

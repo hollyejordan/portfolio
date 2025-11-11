@@ -20,7 +20,7 @@ export default function ProjectCard({ title, path, thumbnail, date, description 
                 className={styles.thumbnail}
                 src={thumbnail}
                 fill
-                alt="Projects thumbnail"
+                alt={`${title} project thumbnail`}
             />
         </div>
         <div className={styles.intro}>
