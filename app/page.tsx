@@ -2,8 +2,12 @@ import styles from "./page.module.css";
 import Image from 'next/image';
 import LinkButton from "./components/LinkButton/LinkButton";
 import ExploreCard from "./components/ExploreCard/ExploreCard";
+import getData from "./lib/getData";
 
-export default function Home() {
+export default async function Home() {
+
+  const data = await getData();
+
   return (
     <>
       <div className={styles.intro}>
@@ -22,14 +26,17 @@ export default function Home() {
           <LinkButton path="/contact" innerText="Contact Me"></LinkButton>
         </div>
       </div>
-      
       <div className={styles.exploreSection}>
         <h2>Featured Projects</h2>
         <div className={styles.exploreCards}>
-          <ExploreCard title="Houseplant Monitoring System" path="/projects/houseplant-monitoring-system" thumbnail="/houseplant-thumbnail-16-9.png" description="A full-stack MERN web app that integrates with an ESP microcontroller to visualise and monitor live plant sensor data."/>
-          <ExploreCard title="Live Transcription Smart Glasses" path="/projects/live-transcription-smart-glasses" thumbnail="/glasses-thumbnail-16-9.jpg" description="An ESP microcontroller system that projects live transcriptions of audio before your eyes, housed in a 3D printed frame."/>
-          <ExploreCard title="Food Waste Management App" path="/projects/food-waste-management-app" thumbnail="/useby-thumbnail-16-9.jpg" description="A React Natvie app for tracking food expiration dates and reducing food waste."/>
-          <ExploreCard title="Arduino Experiments Portfolio" path="/projects/arduino-experiment-portfolio" thumbnail="/experiments-thumbnail-16-9.jpg" description=""/>
+        {data.map((project: { title: string; path: string; thumbnail: string; date: string; description: string; }) => (
+          <ExploreCard
+            key={project.title}
+            title={project.title}
+            path={project.path}
+            thumbnail={project.thumbnail}
+            description={project.description}/>
+        ))}
         </div>
       </div>
     </>
