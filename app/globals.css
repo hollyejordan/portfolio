@@ -79,7 +79,7 @@ p {
   width: 100%;
   max-width: 1024px;
   background-color: var(--foreground);
-  padding: 48px;
+  padding: var(--spacing);
 }
 
 .button {
@@ -104,4 +104,11 @@ p {
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: var(--spacing);
+}
+
+@media (min-width: 540px) {
+
+  .page {
+    padding: 48px;
+  }
 }

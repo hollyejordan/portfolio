@@ -8,7 +8,6 @@ export default async function Projects() {
   return (
     <>
       <h1>Projects</h1>
-
       {data.map((project: { title: string; path: string; thumbnail: string; date: string; description: string; }) => (
         <ProjectCard
           key={project.title}
