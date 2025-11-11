@@ -13,7 +13,7 @@ type ExploreCardProps = {
 export default function ExploreCard({ title, path, thumbnail, description }: ExploreCardProps) {
 
   return (
-    <Link href={path} className={`${styles.exploreCard} thinBorderBox`}>
+    <Link href={path} className={styles.exploreCard}>
         <Image
           className={styles.thumbnail}
           src={thumbnail}

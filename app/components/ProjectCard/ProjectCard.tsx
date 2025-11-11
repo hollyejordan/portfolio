@@ -28,7 +28,7 @@ export default function ProjectCard({ title, path, thumbnail, date, description 
                 <h3>{title}</h3>
                 <h4>{date}</h4>
             </div>
-                <p>{description}</p>
+            <p>{description}</p>
             <LinkButton path={path} innerText="Read More"></LinkButton>
         </div>
     </Link>
