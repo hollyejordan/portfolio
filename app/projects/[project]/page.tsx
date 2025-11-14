@@ -5,13 +5,13 @@ import { notFound } from "next/navigation";
 import HouseplantWebsite from "../project_components/HouseplantWebsite";
 import TranscriptionGlasses from "../project_components/TranscriptionGlasses";
 import FoodWasteApp from "../project_components/FoodWasteApp";
+import ArduinoExperiments from "../project_components/ArduinoExperiments";
 
 type ProjectProps = {
   params: Promise<{ project: string }>;
 }
 
 export default async function Project({ params }: ProjectProps) {
-  
   const { project } = await params;
   const data = await getData();
   const projectData = data[project];
@@ -20,6 +20,7 @@ export default async function Project({ params }: ProjectProps) {
     "houseplant-monitoring-system": HouseplantWebsite,
     "live-transcription-smart-glasses": TranscriptionGlasses,
     "food-waste-management-app": FoodWasteApp,
+    "arduino-experiment-portfolio": ArduinoExperiments
   };
 
   const SelectedComponent = components[project];
