@@ -1,28 +1,28 @@
 [
     {
+        "id":"houseplant-monitoring-system",
         "title":"Houseplant Monitoring System",
-        "path":"/projects/houseplant-monitoring-system",
         "date":"Aug 2025",
         "description":"A full-stack MERN web app that integrates with an ESP microcontroller to visualise and monitor live plant sensor data.",
         "thumbnail":"/houseplant-thumbnail-16-9.png"
     },
     {
+        "id":"live-transcription-smart-glasses",
         "title":"Live Transcription Smart Glasses",
-        "path":"/projects/live-transcription-smart-glasses",
         "date":"May 2025",
         "description":"An ESP microcontroller system that projects live transcriptions of audio before your eyes, housed in a 3D printed frame.",
         "thumbnail":"/glasses-thumbnail-16-9.jpg"
     },
     {
+        "id":"food-waste-management-app",
         "title":"Food Waste Management App",
-        "path":"/projects/food-waste-management-app",
         "date":"May 2025",
         "description":"A React Natvie app for tracking food expiration dates and reducing food waste.",
         "thumbnail":"/use-by-thumbnail-16-9.jpg"
     },
     {
+        "id":"arduino-experiment-portfolio",
         "title":"Arduino Experiments Portfolio",
-        "path":"/projects/arduino-experiment-portfolio",
         "date":"May 2024",
         "description":"description",
         "thumbnail":"/experiments-thumbnail-16-9.jpg"

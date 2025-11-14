@@ -28,11 +28,11 @@ export default async function Home() {
       <div className={styles.exploreSection}>
         <h2>Featured Projects</h2>
         <div className={styles.exploreCards}>
-        {data.map((project: { title: string; path: string; thumbnail: string; date: string; description: string; }) => (
+        {data.map((project: { id: string; title: string; thumbnail: string; date: string; description: string; }) => (
           <ExploreCard
-            key={project.title}
+            key={project.id}
             title={project.title}
-            path={project.path}
+            path={`projects/${project.id}`}
             thumbnail={project.thumbnail}
             description={project.description}/>
         ))}
