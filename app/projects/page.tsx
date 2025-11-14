@@ -1,5 +1,6 @@
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import getData from "../lib/getData";
+import { Project } from "../types/project";
 
 export default async function Projects() {
 
@@ -8,15 +9,19 @@ export default async function Projects() {
   return (
     <>
       <h1>Projects</h1>
-      {data.map((project: { id: string; title: string; thumbnail: string; date: string; description: string; }) => (
-        <ProjectCard
-          key={project.id}
-          title={project.title}
-          path={`projects/${project.id}`}
-          thumbnail={project.thumbnail}
-          date={project.date}
-          description={project.description}/>
-      ))}
+      {Object.keys(data).map((slug: string) => {
+        const project: Project = data[slug];
+        return (
+          <ProjectCard
+            key={slug}
+            title={project.title}
+            path={`projects/${slug}`}
+            thumbnail={project.thumbnail}
+            date={project.date}
+            description={project.description}
+          />
+        );
+      })}
     </>
   );
 }

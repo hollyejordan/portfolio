@@ -3,6 +3,7 @@ import Image from 'next/image';
 import LinkButton from "./components/LinkButton/LinkButton";
 import ExploreCard from "./components/ExploreCard/ExploreCard";
 import getData from "./lib/getData";
+import { Project } from "./types/project";
 
 export default async function Home() {
 
@@ -28,16 +29,21 @@ export default async function Home() {
       <div className={styles.exploreSection}>
         <h2>Featured Projects</h2>
         <div className={styles.exploreCards}>
-        {data.map((project: { id: string; title: string; thumbnail: string; date: string; description: string; }) => (
-          <ExploreCard
-            key={project.id}
-            title={project.title}
-            path={`projects/${project.id}`}
-            thumbnail={project.thumbnail}
-            description={project.description}/>
-        ))}
+        {Object.keys(data).map((slug: string) => {
+          const project: Project = data[slug];
+          return (
+            <ExploreCard
+              key={slug}
+              title={project.title}
+              path={`projects/${slug}`}
+              thumbnail={project.thumbnail}
+              description={project.description}
+            />
+          );
+        })}
         </div>
       </div>
     </>
   );
 }
+
