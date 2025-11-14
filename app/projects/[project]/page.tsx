@@ -1,8 +1,9 @@
 import getData from "@/app/lib/getData";
 import Image from "next/image";
 import styles from "./page.module.css";
-import HouseplantWebsite from "../project_components/HouseplantWebsite";
 import { notFound } from "next/navigation";
+import HouseplantWebsite from "../project_components/HouseplantWebsite";
+import TranscriptionGlasses from "../project_components/TranscriptionGlasses";
 
 type ProjectProps = {
   params: Promise<{ project: string }>;
@@ -15,7 +16,8 @@ export default async function Project({ params }: ProjectProps) {
   const projectData = data[project];
 
   const components: Record<string, React.FC> = {
-    "houseplant-monitoring-system": HouseplantWebsite
+    "houseplant-monitoring-system": HouseplantWebsite,
+    "live-transcription-smart-glasses": TranscriptionGlasses
   };
 
   const SelectedComponent = components[project];
