@@ -2,6 +2,12 @@
     text-wrap: balance;
 }
 
+.notice {
+    color: red;
+    font-weight: bold;
+    padding-bottom: var(--spacing);
+}
+
 .banner {
     position: relative;
     width: 100%;

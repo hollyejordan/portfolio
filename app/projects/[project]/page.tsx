@@ -30,6 +30,7 @@ export default async function Project({ params }: ProjectProps) {
   }
 
   return <div className={styles.projectBody}>
+      <p className={styles.notice}>Notice: This page is currently under development and is not fully implemented.</p>
     <div className={styles.banner}>
       <Image
         src={projectData.thumbnail}
