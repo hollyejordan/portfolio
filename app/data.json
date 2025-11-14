@@ -3,13 +3,7 @@
         "title":"Houseplant Monitoring System",
         "date":"Aug 2025",
         "description":"A full-stack MERN web app that integrates with an ESP microcontroller to monitor and visualise live plant sensor data.",
-        "thumbnail":"/houseplant-thumbnail-16-9.png",
-        "content": [
-            {
-                "type": "p",
-                "text": "hello world"
-            }
-        ]
+        "thumbnail":"/houseplant-thumbnail-16-9.png"
     },
     "live-transcription-smart-glasses": {
         "title":"Live Transcription Smart Glasses",
