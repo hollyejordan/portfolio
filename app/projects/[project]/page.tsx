@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { notFound } from "next/navigation";
 import HouseplantWebsite from "../project_components/HouseplantWebsite";
 import TranscriptionGlasses from "../project_components/TranscriptionGlasses";
+import FoodWasteApp from "../project_components/FoodWasteApp";
 
 type ProjectProps = {
   params: Promise<{ project: string }>;
@@ -17,7 +18,8 @@ export default async function Project({ params }: ProjectProps) {
 
   const components: Record<string, React.FC> = {
     "houseplant-monitoring-system": HouseplantWebsite,
-    "live-transcription-smart-glasses": TranscriptionGlasses
+    "live-transcription-smart-glasses": TranscriptionGlasses,
+    "food-waste-management-app": FoodWasteApp,
   };
 
   const SelectedComponent = components[project];
