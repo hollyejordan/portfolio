@@ -1,0 +1,30 @@
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: var(--spacing);
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    bottom:0;
+    padding: var(--spacing);
+    background-color: rgba(0, 0, 0, 0.3);;
+}
+
+.title * {
+    color: white;
+}
+
+/* .test {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px;
+} */

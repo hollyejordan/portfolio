@@ -3,5 +3,5 @@ export type Project = {
   date: string;
   description: string;
   thumbnail: string;
-  content?: { type: string; text: string }[]; // optional content array
+  content: { type: string; text: string }[];
 };
