@@ -1,6 +1,8 @@
 import getData from "@/app/lib/getData";
 import Image from "next/image";
 import styles from "./page.module.css";
+import HouseplantWebsite from "../project_components/HouseplantWebsite";
+import { notFound } from "next/navigation";
 
 type ProjectProps = {
   params: Promise<{ project: string }>;
@@ -12,7 +14,17 @@ export default async function Project({ params }: ProjectProps) {
   const data = await getData();
   const projectData = data[project];
 
-  return <>
+  const components: Record<string, React.FC> = {
+    "houseplant-monitoring-system": HouseplantWebsite
+  };
+
+  const SelectedComponent = components[project];
+
+  if (!SelectedComponent) {
+    notFound();
+  }
+
+  return <div className={styles.projectBody}>
     <div className={styles.banner}>
       <Image
         src={projectData.thumbnail}
@@ -25,7 +37,6 @@ export default async function Project({ params }: ProjectProps) {
         <p>{projectData.date}</p>
       </div>
     </div>
-    <h2>Introduction</h2>
-    <p>{projectData.description}</p>
-  </>
+    <SelectedComponent />
+  </div>
 }
