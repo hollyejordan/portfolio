@@ -1,3 +1,6 @@
+import Image from "next/image";
+import styles from "./HouseplantWebsite.module.css";
+
 export default function HouseplantWebsite() {
     return (
     <>
@@ -28,8 +31,17 @@ export default function HouseplantWebsite() {
             <li>Forms to add new plants or edit existing information</li>
         </ul>
         <h2>System Architecture</h2>
+        <p>The system is based on the MERN stack, using React for the frontend, Express and Node.js for the backend, and MongoDB as a database. An ESP32 Feather microcontroller is connected, and sends sensor readings to the backend, which is then sent to and stored in the database. User plant data is also stored in the database, which is rendered dynamically on the frontend. The server also fetches omitted plant data from the Perenual plant API, such as plant images.</p>
+        <div className={styles.uml}>
+            <div>
+            <Image
+                src="/architecture-uml-diagram.png"
+                fill
+                alt="Architecture UML Diagram"
+            />
+            </div>
+        </div>
         <h3>Frontend</h3>
-        <p></p>
         <h2>Links</h2>
         <ul>
             <li>
