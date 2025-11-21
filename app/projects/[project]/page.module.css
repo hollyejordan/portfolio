@@ -37,3 +37,7 @@
     border: 0;
     padding-top: var(--small-spacing);
 }
+
+.projectBody ul {
+    list-style-position: inside;
+}
