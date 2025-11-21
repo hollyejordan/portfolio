@@ -1,7 +1,3 @@
-.projectBody {
-    text-wrap: balance;
-}
-
 .notice {
     color: red;
     font-weight: bold;
@@ -28,7 +24,11 @@
 }
 
 .projectBody h2 {
-    padding-top: var(--spacing);
+    padding-top: var(--small-spacing);
+}
+
+.projectBody p, .projectBody ul {
+    padding-bottom: var(--small-spacing);
 }
 
 .projectBody iframe {
@@ -39,5 +39,5 @@
 }
 
 .projectBody ul {
-    list-style-position: inside;
+    padding-left: 30px;
 }
