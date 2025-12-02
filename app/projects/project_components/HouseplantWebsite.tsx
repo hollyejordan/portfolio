@@ -10,10 +10,12 @@ export default function HouseplantWebsite() {
     function displayTab() {
 
         const pages = ["dashboard", "plant profile", "add", "edit"]
-        let imageSrc = "/dashboard.png"
+        let imageSrc;
+        let description;
 
         if (tab == 0) {
             imageSrc = "/dashboard.png";
+            description = "The dashboard page acts as the site's homepage, and displays an overview of all of the user's plants. Each plant is represented by a mini profile, which uses a component called PlantMiniProfile. Once a user's plant data is fetched from the database, each record is mapped to one of these components. These mini profiles show a plant's image, name, location, status and conditions. The status and conditions icons are calculated based on live sensor data.";
         }
         else if (tab == 1) {
             imageSrc = "/plant-profile.png";
@@ -26,6 +28,8 @@ export default function HouseplantWebsite() {
         }
 
         return (
+        <>
+            <p>{description}</p>
             <div className={styles.imageContainer}>
                 <Image
                     src={imageSrc}
@@ -35,6 +39,7 @@ export default function HouseplantWebsite() {
                     alt={`Screenshot of the ${pages[tab]} page`}
                 />
             </div>
+        </>
         )
     }
 
