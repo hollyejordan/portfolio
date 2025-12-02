@@ -7,6 +7,37 @@ export default function HouseplantWebsite() {
 
     const [tab, setTab] = React.useState(0);
 
+    function displayTab() {
+
+        const pages = ["dashboard", "plant profile", "add", "edit"]
+        let imageSrc = "/dashboard.png"
+
+        if (tab == 0) {
+            imageSrc = "/dashboard.png";
+        }
+        else if (tab == 1) {
+            imageSrc = "/plant-profile.png";
+        }
+        else if (tab == 2) {
+            imageSrc = "/add-plant.png"
+        }
+        else {
+            imageSrc = "/edit-plant.jpg"
+        }
+
+        return (
+            <div className={styles.imageContainer}>
+                <Image
+                    src={imageSrc}
+                    width={200}
+                    height={200}
+                    layout="responsive"
+                    alt={`Screenshot of the ${pages[tab]} page`}
+                />
+            </div>
+        )
+    }
+
     return (
     <>
         <h2>Introduction</h2>
@@ -47,23 +78,15 @@ export default function HouseplantWebsite() {
             />
         </div>
         <h3>Frontend</h3>
-        <p>The frontend is built with React for the user interface. There are three main page types: the dashboard, plant profiles, and the add/edit plant pages.</p>
+        <p>The frontend is built with React for the user interface. There are four page types: the dashboard, plant profiles, add plant and edit plant.</p>
         <div className={styles.selectionBar}>
-            <p>{tab}</p>
-            <button onClick={() => {setTab(0)}} className="button">Dashboard Page</button>
-            <button onClick={() => {setTab(1)}} className="button">Plant Profile Page</button>
-            <button onClick={() => {setTab(2)}} className="button">Add/Edit Plant Page</button>
+            <button onClick={() => {setTab(0)}} className="button">Dashboard</button>
+            <button onClick={() => {setTab(1)}} className="button">Plant Profile</button>
+            <button onClick={() => {setTab(2)}} className="button">Add Plant</button>
+            <button onClick={() => {setTab(3)}} className="button">Edit Plant</button>
         </div>
-        <div className={styles.selectedItem}>
-            <div className={styles.imageContainer}>
-                <Image
-                    src="/dashboard.png"
-                    width={200}
-                    height={200}
-                    layout="responsive"
-                    alt="Architecture UML Diagram"
-                />
-            </div>
+        <div>
+            {displayTab()}
         </div>
         
         <h3>Backend</h3>
