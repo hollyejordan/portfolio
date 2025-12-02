@@ -1,27 +1,21 @@
-.uml {
-  
-  width: 100%;
+.imageContainer {
   display: flex;
   justify-content: center;
-  min-height: 100px
-}
-
-.uml div {
-    position: relative;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
+  padding-bottom: var(--small-spacing);
+  width: 100%;
+  margin: auto;
 }
 
 @media (min-width: 540px) {
 
-    .uml div {
+    .imageContainer {
         width: 80%;
     }
 }
 
 @media (min-width: 720px) {
-    .uml div {
+
+    .imageContainer {
         width: 50%;
     }
 }

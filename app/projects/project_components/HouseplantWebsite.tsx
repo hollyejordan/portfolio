@@ -32,16 +32,27 @@ export default function HouseplantWebsite() {
         </ul>
         <h2>System Architecture</h2>
         <p>The system is based on the MERN stack, using React for the frontend, Express and Node.js for the backend, and MongoDB as a database. An ESP32 Feather microcontroller is connected, and sends sensor readings to the backend, which is then sent to and stored in the database. User plant data is also stored in the database, which is rendered dynamically on the frontend. The server also fetches omitted plant data from the Perenual plant API, such as plant images.</p>
-        <div className={styles.uml}>
-            <div>
+        <div className={styles.imageContainer}>
             <Image
                 src="/architecture-uml-diagram.png"
-                fill
+                width={200}
+                height={200}
+                layout="responsive"
                 alt="Architecture UML Diagram"
             />
-            </div>
         </div>
         <h3>Frontend</h3>
+        <p>The frontend is built with React for the user interface. There are three main page types: the dashboard, plant profiles, and the add plant page.</p>
+        <div className={styles.imageContainer}>
+            <Image
+                src="/dashboard.png"
+                width={200}
+                height={200}
+                layout="responsive"
+                alt="Architecture UML Diagram"
+            />
+        </div>
+        <h3>Backend</h3>
         <h2>Links</h2>
         <ul>
             <li>
