@@ -1,7 +1,12 @@
+"use client"
 import Image from "next/image";
 import styles from "./HouseplantWebsite.module.css";
+import React from "react";
 
 export default function HouseplantWebsite() {
+
+    const [tab, setTab] = React.useState(0);
+
     return (
     <>
         <h2>Introduction</h2>
@@ -42,16 +47,25 @@ export default function HouseplantWebsite() {
             />
         </div>
         <h3>Frontend</h3>
-        <p>The frontend is built with React for the user interface. There are three main page types: the dashboard, plant profiles, and the add plant page.</p>
-        <div className={styles.imageContainer}>
-            <Image
-                src="/dashboard.png"
-                width={200}
-                height={200}
-                layout="responsive"
-                alt="Architecture UML Diagram"
-            />
+        <p>The frontend is built with React for the user interface. There are three main page types: the dashboard, plant profiles, and the add/edit plant pages.</p>
+        <div className={styles.selectionBar}>
+            <p>{tab}</p>
+            <button onClick={() => {setTab(0)}} className="button">Dashboard Page</button>
+            <button onClick={() => {setTab(1)}} className="button">Plant Profile Page</button>
+            <button onClick={() => {setTab(2)}} className="button">Add/Edit Plant Page</button>
         </div>
+        <div className={styles.selectedItem}>
+            <div className={styles.imageContainer}>
+                <Image
+                    src="/dashboard.png"
+                    width={200}
+                    height={200}
+                    layout="responsive"
+                    alt="Architecture UML Diagram"
+                />
+            </div>
+        </div>
+        
         <h3>Backend</h3>
         <h2>Links</h2>
         <ul>

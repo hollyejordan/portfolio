@@ -6,6 +6,23 @@
   margin: auto;
 }
 
+.selectionBar {
+    display: flex;
+    width: 100%;
+    gap: var(--spacing);
+    padding-bottom: var(--spacing);
+}
+
+.selectionBar button {
+    border: none;
+    background-color: var(--primary-colour);
+    width: 100%;
+}
+
+.selectionBar button:hover {
+    cursor: pointer;
+}
+
 @media (min-width: 540px) {
 
     .imageContainer {
