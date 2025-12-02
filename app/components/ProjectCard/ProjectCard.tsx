@@ -26,7 +26,7 @@ export default function ProjectCard({ title, path, thumbnail, date, description 
         <div className={styles.intro}>
             <div>
                 <h3>{title}</h3>
-                <h4>{date}</h4>
+                <h5>{date}</h5>
             </div>
             <p>{description}</p>
             <LinkButton path={path} innerText="Read More"></LinkButton>

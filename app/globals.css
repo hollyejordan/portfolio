@@ -48,16 +48,16 @@ h1, h2 {
   line-height: 48px;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4 h5 {
   font-weight: 600;
   
 }
 
-h4, p, ul {
+h5, p, ul {
   color: var(--text-secondary);
 }
 
-h4 {
+h5 {
   font-size: 14px;
 }
 

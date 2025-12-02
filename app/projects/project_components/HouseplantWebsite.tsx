@@ -5,44 +5,6 @@ import React from "react";
 
 export default function HouseplantWebsite() {
 
-    const [tab, setTab] = React.useState(0);
-
-    function displayTab() {
-
-        const pages = ["dashboard", "plant profile", "add", "edit"]
-        let imageSrc;
-        let description;
-
-        if (tab == 0) {
-            imageSrc = "/dashboard.png";
-            description = "The dashboard page acts as the site's homepage, and displays an overview of all of the user's plants. Each plant is represented by a mini profile, which uses a component called PlantMiniProfile. Once a user's plant data is fetched from the database, each record is mapped to one of these components. These mini profiles show a plant's image, name, location, status and conditions. The status and conditions icons are calculated based on live sensor data.";
-        }
-        else if (tab == 1) {
-            imageSrc = "/plant-profile.png";
-        }
-        else if (tab == 2) {
-            imageSrc = "/add-plant.png"
-        }
-        else {
-            imageSrc = "/edit-plant.jpg"
-        }
-
-        return (
-        <>
-            <p>{description}</p>
-            <div className={styles.imageContainer}>
-                <Image
-                    src={imageSrc}
-                    width={200}
-                    height={200}
-                    layout="responsive"
-                    alt={`Screenshot of the ${pages[tab]} page`}
-                />
-            </div>
-        </>
-        )
-    }
-
     return (
     <>
         <h2>Introduction</h2>
@@ -84,16 +46,36 @@ export default function HouseplantWebsite() {
         </div>
         <h3>Frontend</h3>
         <p>The frontend is built with React for the user interface. There are four page types: the dashboard, plant profiles, add plant and edit plant.</p>
-        <div className={styles.selectionBar}>
-            <button onClick={() => {setTab(0)}} className="button">Dashboard</button>
-            <button onClick={() => {setTab(1)}} className="button">Plant Profile</button>
-            <button onClick={() => {setTab(2)}} className="button">Add Plant</button>
-            <button onClick={() => {setTab(3)}} className="button">Edit Plant</button>
+        <div className={`${styles.pageSection} ${styles.rightHeavy}`}>
+            <div className={styles.imageContainer}>
+                <Image
+                    src="/dashboard.png"
+                    width={200}
+                    height={200}
+                    layout="responsive"
+                    alt={`Screenshot of the dashboard page`}
+                />
+            </div>
+            <div>
+                <h4>Dashboard</h4>
+                <p>The dashboard page acts as the site's homepage, and displays an overview of all of the user's plants. Each plant is represented by a mini profile, which uses a component called PlantMiniProfile. Once a user's plant data is fetched from the database, each record is mapped to one of these components. These mini profiles show a plant's image, name, location, status and conditions. The status and conditions icons are calculated based on live sensor data.</p>
+            </div>
         </div>
-        <div>
-            {displayTab()}
+        <div className={`${styles.pageSection} ${styles.leftHeavy}`}>
+            <div>
+                <h4>Plant Profile</h4>
+                <p>In progress</p>
+            </div>
+            <div className={styles.imageContainer}>
+                <Image
+                    src="/plant-profile.png"
+                    width={200}
+                    height={200}
+                    layout="responsive"
+                    alt={`Screenshot of the plant profile page`}
+                />
+            </div>
         </div>
-        
         <h3>Backend</h3>
         <h2>Links</h2>
         <ul>
