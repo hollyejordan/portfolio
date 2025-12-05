@@ -91,18 +91,15 @@ export default function HouseplantWebsite() {
             </div>
         </div>
         <div className={`${styles.pageSection} ${styles.rightHeavy}`}>
-            <div>
-                <div className={styles.imageContainer}>
-                    <Image
-                        src="/edit-plant.jpg"
-                        width={200}
-                        height={200}
-                        layout="responsive"
-                        alt={`Screenshot of the plant profile page`}
-                    />
-                </div>
+            <div className={styles.imageContainer}>
+                <Image
+                    src="/edit-plant.jpg"
+                    width={200}
+                    height={200}
+                    layout="responsive"
+                    alt={`Screenshot of the plant profile page`}
+                />
             </div>
-            
             <div>
                 <h4>Add / Edit Plant</h4>
                 <p>The pages to add a plant and edit a plant are very similar, and both provide a form for a user to fill out.</p>

@@ -4,11 +4,11 @@
   padding-bottom: var(--small-spacing);
   width: 100%;
   margin: auto;
+  order: 2;
 }
 
 .pageSection .imageContainer {
-
-    width: 100%;
+    width: 70%;
 }
 
 .selectionBar {
@@ -30,14 +30,6 @@
     padding: var(--spacing) 0;
 }
 
-.leftHeavy {
-    grid-template-columns: 3fr 2fr;
-}
-
-.rightHeavy {
-    grid-template-columns: 2fr 3fr;
-}
-
 .selectionBar button:hover {
     cursor: pointer;
 }
@@ -45,7 +37,11 @@
 @media (min-width: 540px) {
 
     .imageContainer {
-        width: 80%;
+        width: 70%;
+    }
+
+    .pageSection .imageContainer {
+        width: 60%;
     }
 }
 
@@ -53,5 +49,18 @@
 
     .imageContainer {
         width: 50%;
+        order: initial;
+    }
+
+    .pageSection .imageContainer {
+        width: 100%;
+    }
+
+    .leftHeavy {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .rightHeavy {
+        grid-template-columns: 2fr 3fr;
     }
 }
