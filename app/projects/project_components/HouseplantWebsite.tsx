@@ -45,7 +45,7 @@ export default function HouseplantWebsite() {
             />
         </div>
         <h3>Frontend</h3>
-        <p>The frontend is built with React for the user interface. There are four page types: the dashboard, plant profiles, add plant and edit plant.</p>
+        <p>The frontend is built with React for the user interface. It uses HTML and JavaScript, paired with pure CSS for page stylings. It is designed to be responsive across a range of screensizes, from small mobile screens to large desktops. There are four page types: the dashboard, plant profiles, add plant and edit plant.</p>
         <div className={`${styles.pageSection} ${styles.rightHeavy}`}>
             <div className={styles.imageContainer}>
                 <Image
@@ -58,13 +58,27 @@ export default function HouseplantWebsite() {
             </div>
             <div>
                 <h4>Dashboard</h4>
-                <p>The dashboard page acts as the site's homepage, and displays an overview of all of the user's plants. Each plant is represented by a mini profile, which uses a component called PlantMiniProfile. Once a user's plant data is fetched from the database, each record is mapped to one of these components. These mini profiles show a plant's image, name, location, status and conditions. The status and conditions icons are calculated based on live sensor data.</p>
+                <p>The dashboard page acts as the site's homepage, and displays an overview of all of the user's plants. Each plant is represented by a mini profile, which uses a component called PlantMiniProfile. Once a user's plant data is fetched from the database, each record is mapped to one of these components.</p>
+                <p>Mini profiles show a plant's image, name, location, status and conditions. The status and conditions icons are calculated based on live sensor data. If no image is uploaded for a particular plant, a picture of that plant species is fetched from the Perenual API.</p>
+                <p>The dashboard also includes a + button, which takes the user to a page where they can add new plants via a form.</p>
             </div>
         </div>
         <div className={`${styles.pageSection} ${styles.leftHeavy}`}>
             <div>
                 <h4>Plant Profile</h4>
-                <p>In progress</p>
+                <p>Each plant profile page uses a component called PlantProfile. This is used to display more in-depth detail about a specific plant, including:</p>
+                <ul>
+                    <li>An image of the plant</li>
+                    <li>A status icon indicating current plant conditions</li>
+                    <li>The species name</li>
+                    <li>The location</li>
+                    <li>The (placeholder) watering schedule</li>
+                    <li>Current plant conditions, including current light and soil moisture levels</li>
+                    <li>A graph of historic sensor readings</li>
+                    <li>(Placeholder) preferred conditions</li>
+                </ul>
+                <p>Much of this information is retrieved from the database by the component, based on the plant's ID which was passed into the URL path parameters. This also allows plant profile pages to be generated dynamically for each of the plants a user has stored.</p>
+                <p>The plant status icons are notable, as they are calculated based off of the last sensor readings taken to give a live assessment of how the plant is doing. They are currently calculated based on specific thresholds, but ideally in future this would be calculated based on API plant-specific data.</p>
             </div>
             <div className={styles.imageContainer}>
                 <Image
@@ -74,6 +88,27 @@ export default function HouseplantWebsite() {
                     layout="responsive"
                     alt={`Screenshot of the plant profile page`}
                 />
+            </div>
+        </div>
+        <div className={`${styles.pageSection} ${styles.rightHeavy}`}>
+            <div>
+                <div className={styles.imageContainer}>
+                    <Image
+                        src="/edit-plant.jpg"
+                        width={200}
+                        height={200}
+                        layout="responsive"
+                        alt={`Screenshot of the plant profile page`}
+                    />
+                </div>
+            </div>
+            
+            <div>
+                <h4>Add / Edit Plant</h4>
+                <p>The pages to add a plant and edit a plant are very similar, and both provide a form for a user to fill out.</p>
+                <p>The page to add a new plant uses a component called AddPlantRecord, and allows a user to store a new plant on the website. The Plant Species field and the Hub Location field both are text input fields, however they provide suggestions that filter as the user types. The Soil Moisture Sensor field is a simple dropdown, and allows the user to pick from the sensors that are currently stored in the system.</p>
+                <p>On the other hand, the page to edit a plant uses the EditPlantRecord component, and allows a user to change the currently stored details for an existing plant. The form automatically populates itself with plant details from the database, but allows the user to change any field. They may press the submit changes button to save their new data to the database. Alternatively, the edit plant form also provides a button to delete the plant, which will remove it from the database and redirect the user to the homepage.</p>
+                <p>Because MongoDB can't directly store image files, the photo upload field converts the uploaded file into a base64 string format first. This string can then be stored in the database.</p>
             </div>
         </div>
         <h3>Backend</h3>
