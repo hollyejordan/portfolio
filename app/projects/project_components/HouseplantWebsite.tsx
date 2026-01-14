@@ -34,7 +34,7 @@ export default function HouseplantWebsite() {
             <li>Forms to add new plants or edit existing information</li>
         </ul>
         <h2>System Architecture</h2>
-        <p>The system is based on the MERN stack, using React for the frontend, Express and Node.js for the backend, and MongoDB as a database. An ESP32 Feather microcontroller is connected, and sends sensor readings to the backend, which is then sent to and stored in the database. User plant data is also stored in the database, which is rendered dynamically on the frontend. The server also fetches omitted plant data from the Perenual plant API, such as plant images.</p>
+        <p>The system is based on the MERN stack, using React for the frontend, Express and Node.js for the backend, and MongoDB as a database. An ESP32 Feather microcontroller is connected, and sends sensor readings to the backend, which is then sent to and stored in the database. User plant data is also stored in the database, which is rendered dynamically on the frontend. The server also fetches omitted data from an API, such as plant images.</p>
         <div className={styles.imageContainer}>
             <Image
                 src="/architecture-uml-diagram.png"
@@ -109,6 +109,39 @@ export default function HouseplantWebsite() {
             </div>
         </div>
         <h3>Backend</h3>
+        <p>The backend consists of a server, built using Express and Node.js, and a MongoDB database. The server handles all requests between the website, database, microcontroller and API to transfer data across to each segment.</p>
+        <h4>Server</h4>
+        <p>The server is a RESTful API that handles HTTP requests at specific endpoints. It is structured around these four main endpoints:</p>
+        <ul>
+            <li>/plant - handles interaction between the website and the database. Typically used for:
+                <ul>
+                    <li>Retrieving a user's plant details</li>
+                    <li>Creating new records for newly added plants</li>
+                    <li>Deleting one of the user's plant records</li>
+                    <li>Updating a plant record with changes</li>
+                </ul>
+            </li>
+            <li>/species - handles interaction between the frontend and the database. Typically used for:
+                <ul>
+                    <li>Retrieving plant species details for plant types stored in the system</li>
+                </ul>
+            </li>
+            <li>/api - handles interaction between the frontend and the plant API. Typically used for:
+                <ul>
+                    <li>Getting an image of a plant when the user did not upload one</li>
+                </ul>
+            </li>
+            <li>/hub - Handles interaction between the microcontroller and the database, and between the frontend and the database. Typically used for:
+                <ul>
+                    <li>Storing light and soil moisture sensor readings</li>
+                    <li>Retrieving hub details for a user's microcontroller hub</li>
+                    <li>Retrieving a plant's light and soil moisture data</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Database</h4>
+        <h3>Microcontroller</h3>
+        <h3>API</h3>
         <h2>Links</h2>
         <ul>
             <li>
