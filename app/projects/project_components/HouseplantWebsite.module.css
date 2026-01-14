@@ -36,7 +36,7 @@
 
 @media (min-width: 540px) {
 
-    .imageContainer {
+    .imageContainer:not(.mongodbImage) {
         width: 70%;
     }
 
@@ -50,6 +50,10 @@
     .imageContainer {
         width: 50%;
         order: initial;
+    }
+
+    .mongodbImage {
+        width: 90%
     }
 
     .pageSection .imageContainer {

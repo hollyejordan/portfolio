@@ -140,6 +140,33 @@ export default function HouseplantWebsite() {
             </li>
         </ul>
         <h4>Database</h4>
+        <p>The database uses MongoDB to store information regarding a user's plants and hubs. It is structured using the following tables:</p>
+        <ul>
+            <li>Plant Table - holds plant details such as its controller, species, photo and which soil moisture sensor it uses</li>
+            <li>Species Table - holds names of plant species the system can recognise</li>
+            <li>Controller Table - holds microcontroller details such as location</li>
+            <li>Light Readings / Soil Moisture Readings Tables - holds data recorded by light or soil moisture sensors, such as level and timestamp</li>
+        </ul>
+        <p>The structure of the database is also highlighted in the UML diagram below.</p>
+        <div className={styles.imageContainer}>
+            <Image
+                src="/database-uml.png"
+                width={200}
+                height={200}
+                layout="responsive"
+                alt="UML of the database"
+            />
+        </div>
+        <p>Below is a screenshot displaying the database structure on the MongoDB website, along with some sample plant records.</p>
+        <div className={`${styles.imageContainer} ${styles.mongodbImage}`}>
+            <Image
+                src="/mongodb-database.png"
+                width={200}
+                height={200}
+                layout="responsive"
+                alt="Screenshot of the MongoDB database"
+            />
+        </div>
         <h3>Microcontroller</h3>
         <h3>API</h3>
         <h2>Links</h2>
