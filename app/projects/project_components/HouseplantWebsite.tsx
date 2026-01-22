@@ -192,6 +192,7 @@ export default function HouseplantWebsite() {
             />
         </div>
         <h3>API</h3>
+        <p>The API used for plant data was <a href="https://perenual.com/" target="_blank">Perenual</a>, which provides information on plants, including things like names, images, and importantly sunlight and watering preferences. I had planned to use the API for preference data so that the light and soil moisture readings taken by the microcontroller could be compared against what each plant actually needs. However, I did not have time to implement this. Instead, the API is currently used for retrieving a plant's picture when the user does not upload one of their own.</p>
         <h2>Links</h2>
         <ul>
             <li>
