@@ -1,7 +1,6 @@
 "use client"
 import Image from "next/image";
 import styles from "./HouseplantWebsite.module.css";
-import React from "react";
 
 export default function HouseplantWebsite() {
 
@@ -193,6 +192,17 @@ export default function HouseplantWebsite() {
         </div>
         <h3>API</h3>
         <p>The API used for plant data was <a href="https://perenual.com/" target="_blank">Perenual</a>, which provides information on plants, including things like names, images, and importantly sunlight and watering preferences. I had planned to use the API for preference data so that the light and soil moisture readings taken by the microcontroller could be compared against what each plant actually needs. However, I did not have time to implement this. Instead, the API is currently used for retrieving a plant's picture when the user does not upload one of their own.</p>
+        <h2>What I Learned</h2>
+        <p>I learned a broad range of skills and technologies through the development of this project. Particularly noteable is the use of a JavaScript framework, pairing this with the MERN tech stack to build a full stack, interactive web app connected to live data readings. Here are the key skills and technologies I learned:</p>
+        <ul>
+            <li>React and how to use JavaScript frameworks</li>
+            <li>Node.js and Express.js for backend server development and request handling</li>
+            <li>MongoDB and handling NoSQL data</li>
+            <li>WiFi transmisssion and HTTP protocols</li>
+            <li>ESP32 microcontrollers</li>
+            <li>MERN stack and how each technology works together to build a full stack application</li>
+        </ul>
+        <h2>Future Improvements</h2>
         <h2>Links</h2>
         <ul>
             <li>

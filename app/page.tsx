@@ -4,6 +4,7 @@ import LinkButton from "./components/LinkButton/LinkButton";
 import ExploreCard from "./components/ExploreCard/ExploreCard";
 import getData from "./lib/getData";
 import { Project } from "./types/project";
+import ProjectCard from "./components/ProjectCard/ProjectCard";
 
 export default async function Home() {
 
@@ -26,7 +27,7 @@ export default async function Home() {
           <LinkButton path="/contact" innerText="Contact Me"></LinkButton>
         </div>
       </div>
-      <div className={styles.exploreSection}>
+      {/* <div className={styles.exploreSection}>
         <h2>Featured Projects</h2>
         <div className={styles.exploreCards}>
         {Object.keys(data).map((slug: string) => {
@@ -42,7 +43,21 @@ export default async function Home() {
           );
         })}
         </div>
-      </div>
+      </div> */}
+      <h1>Projects</h1>
+            {Object.keys(data).map((slug: string) => {
+              const project: Project = data[slug];
+              return (
+                <ProjectCard
+                  key={slug}
+                  title={project.title}
+                  path={`projects/${slug}`}
+                  thumbnail={project.thumbnail}
+                  date={project.date}
+                  description={project.description}
+                />
+              );
+            })}
     </>
   );
 }
