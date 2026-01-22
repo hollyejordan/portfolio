@@ -167,7 +167,30 @@ export default function HouseplantWebsite() {
                 alt="Screenshot of the MongoDB database"
             />
         </div>
+        <p>The light_readings and soil_moisture_readings tables are set up to be time-series collections, and automatically delete records after a certain amount of time has passed. This is due to the large volume of sensor readings being stored, but only recent readings being used.</p>
         <h3>Microcontroller</h3>
+        <p>The microcontroller used is an Adafruit HUZZAH32 ESP32 Feather Board. It is connected to two capacitive soil moisture sensors, which can be inserted into soil to give soil moisture readings. It is also connected to one photoresistor, which can be measured to find light levels.</p>
+        <p>Below is a circuit diagram of the microcontroller system.</p>
+        <div className={styles.imageContainer}>
+            <Image
+                src="/circuit-diagram.png"
+                width={200}
+                height={200}
+                layout="responsive"
+                alt="Circuit diagram of the microcontroller system"
+            />
+        </div>
+        <p>The microcontroller uses Wi-Fi to interact with the server. After taking readings at regular intervals, it stores these readings in JSON format, then sends HTTP POST requests to the server. The server handles these requests by processing the data and storing it in the database.</p>
+        <p>Below is an image of the microcontroller system.</p>
+        <div className={styles.imageContainer}>
+            <Image
+                src="/hub.jpg"
+                width={200}
+                height={200}
+                layout="responsive"
+                alt="Photo of the microcontroller system"
+            />
+        </div>
         <h3>API</h3>
         <h2>Links</h2>
         <ul>
