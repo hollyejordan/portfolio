@@ -44,7 +44,7 @@ export default async function Home() {
         })}
         </div>
       </div> */}
-      <h1>Projects</h1>
+      <h1>Featured Projects</h1>
             {Object.keys(data).map((slug: string) => {
               const project: Project = data[slug];
               return (
