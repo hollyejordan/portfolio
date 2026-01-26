@@ -112,7 +112,7 @@ export default function HouseplantWebsite() {
         <h4>Server</h4>
         <p>The server is a RESTful API that handles HTTP requests at specific endpoints. It is structured around these four main endpoints:</p>
         <ul>
-            <li><b>/plant -</b> handles interaction between the website and the database. Typically used for:
+            <li><b>/plant -</b> Handles interaction between the website and the database. Typically used for:
                 <ul>
                     <li>Retrieving a user's plant details</li>
                     <li>Creating new records for newly added plants</li>
@@ -120,12 +120,12 @@ export default function HouseplantWebsite() {
                     <li>Updating a plant record with changes</li>
                 </ul>
             </li>
-            <li><b>/species -</b> handles interaction between the frontend and the database. Typically used for:
+            <li><b>/species -</b> Handles interaction between the frontend and the database. Typically used for:
                 <ul>
                     <li>Retrieving plant species details for plant types stored in the system</li>
                 </ul>
             </li>
-            <li><b>/api -</b> handles interaction between the frontend and the plant API. Typically used for:
+            <li><b>/api -</b> Handles interaction between the frontend and the plant API. Typically used for:
                 <ul>
                     <li>Getting an image of a plant when the user did not upload one</li>
                 </ul>
@@ -141,10 +141,10 @@ export default function HouseplantWebsite() {
         <h4>Database</h4>
         <p>The database uses MongoDB to store information regarding a user's plants and hubs. It is structured using the following tables:</p>
         <ul>
-            <li><b>Plant Table -</b> holds plant details such as its controller, species, photo and which soil moisture sensor it uses</li>
-            <li><b>Species Table -</b> holds names of plant species the system can recognise</li>
-            <li><b>Controller Table -</b> holds microcontroller details such as location</li>
-            <li><b>Light Readings / Soil Moisture Readings Tables -</b> holds data recorded by light or soil moisture sensors, such as level and timestamp</li>
+            <li><b>Plant Table -</b> Holds plant details such as its controller, species, photo and which soil moisture sensor it uses</li>
+            <li><b>Species Table -</b> Holds names of plant species the system can recognise</li>
+            <li><b>Controller Table -</b> Holds microcontroller details such as location</li>
+            <li><b>Light Readings / Soil Moisture Readings Tables -</b> Holds data recorded by light or soil moisture sensors, such as level and timestamp</li>
         </ul>
         <p>The structure of the database is also highlighted in the UML diagram below.</p>
         <div className={styles.imageContainer}>
