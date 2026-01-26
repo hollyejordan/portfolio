@@ -112,7 +112,7 @@ export default function HouseplantWebsite() {
         <h4>Server</h4>
         <p>The server is a RESTful API that handles HTTP requests at specific endpoints. It is structured around these four main endpoints:</p>
         <ul>
-            <li>/plant - handles interaction between the website and the database. Typically used for:
+            <li><b>/plant -</b> handles interaction between the website and the database. Typically used for:
                 <ul>
                     <li>Retrieving a user's plant details</li>
                     <li>Creating new records for newly added plants</li>
@@ -120,17 +120,17 @@ export default function HouseplantWebsite() {
                     <li>Updating a plant record with changes</li>
                 </ul>
             </li>
-            <li>/species - handles interaction between the frontend and the database. Typically used for:
+            <li><b>/species -</b> handles interaction between the frontend and the database. Typically used for:
                 <ul>
                     <li>Retrieving plant species details for plant types stored in the system</li>
                 </ul>
             </li>
-            <li>/api - handles interaction between the frontend and the plant API. Typically used for:
+            <li><b>/api -</b> handles interaction between the frontend and the plant API. Typically used for:
                 <ul>
                     <li>Getting an image of a plant when the user did not upload one</li>
                 </ul>
             </li>
-            <li>/hub - Handles interaction between the microcontroller and the database, and between the frontend and the database. Typically used for:
+            <li><b>/hub -</b> Handles interaction between the microcontroller and the database, and between the frontend and the database. Typically used for:
                 <ul>
                     <li>Storing light and soil moisture sensor readings</li>
                     <li>Retrieving hub details for a user's microcontroller hub</li>
@@ -141,10 +141,10 @@ export default function HouseplantWebsite() {
         <h4>Database</h4>
         <p>The database uses MongoDB to store information regarding a user's plants and hubs. It is structured using the following tables:</p>
         <ul>
-            <li>Plant Table - holds plant details such as its controller, species, photo and which soil moisture sensor it uses</li>
-            <li>Species Table - holds names of plant species the system can recognise</li>
-            <li>Controller Table - holds microcontroller details such as location</li>
-            <li>Light Readings / Soil Moisture Readings Tables - holds data recorded by light or soil moisture sensors, such as level and timestamp</li>
+            <li><b>Plant Table -</b> holds plant details such as its controller, species, photo and which soil moisture sensor it uses</li>
+            <li><b>Species Table -</b> holds names of plant species the system can recognise</li>
+            <li><b>Controller Table -</b> holds microcontroller details such as location</li>
+            <li><b>Light Readings / Soil Moisture Readings Tables -</b> holds data recorded by light or soil moisture sensors, such as level and timestamp</li>
         </ul>
         <p>The structure of the database is also highlighted in the UML diagram below.</p>
         <div className={styles.imageContainer}>
@@ -205,23 +205,23 @@ export default function HouseplantWebsite() {
         <h2>Limitations</h2>
         <p>There are some limitations of the current system, and ways it could be improved. Here are some of the current limitations, and the features that would fix them:</p>
         <ul>
-            <li>Usage plant-specific condition data. The system currently evaluates every plant's status in the same way. If the system retrieved such data from the API, it could give more accurate status icons. For example, a plant that needs very little water could display a green status even if the soil is quite dry.</li>
-            <li>User accounts. The system does not currently handle multiple user accounts or logins, so there is technically only one user account available. By adding user accounts, multiple users could sign up and keep track of their own plants, without being able to see other user's plants.</li>
-            <li>Hub addition. There is not currently a way for a user to have multiple hubs, because of the limited microcontroller resources I had. If functionality were added to be able to add new hubs to the system, users could keep track of their plants in multiple different locations.</li>
-            <li>Watering schedules. I would have liked to include a system that would provide watering schedules for each plant, and alert the user when it is time to water their plant. Currently, there is only a placeholder of this on each plant profile.</li>
-            <li>Seasonal changes. The system does not currently consider the season or even time of day when it evalauted the readings. For example, it does not know when it is night, but even though the light readings show it is dark, it may think the conditions are bad for the plant. This would be solved by integrating a calendar or clock system, so that it can make adjustments to its evaluation as needed.</li>
+            <li><b>Plant-specific condition data -</b> The system currently evaluates every plant's status in the same way. If the system retrieved such data from the API, it could give more accurate status icons. For example, a plant that needs very little water could display a green status even if the soil is quite dry.</li>
+            <li><b>User accounts -</b> The system does not currently handle multiple user accounts or logins, so there is technically only one user account available. By adding user accounts, multiple users could sign up and keep track of their own plants, without being able to see other user's plants.</li>
+            <li><b>Hub addition -</b> There is not currently a way for a user to have multiple hubs, because of the limited microcontroller resources I had. If functionality were added to be able to add new hubs to the system, users could keep track of their plants in multiple different locations.</li>
+            <li><b>Watering schedules -</b> I would have liked to include a system that would provide watering schedules for each plant, and alert the user when it is time to water their plant. Currently, there is only a placeholder of this on each plant profile.</li>
+            <li><b>Seasonal changes -</b> The system does not currently consider the season or even time of day when it evalauted the readings. For example, it does not know when it is night, but even though the light readings show it is dark, it may think the conditions are bad for the plant. This would be solved by integrating a calendar or clock system, so that it can make adjustments to its evaluation as needed.</li>
         </ul>
         <h2>Future Improvements</h2>
         <p>I had several extension goals in mind as I was planning the project. I identified that these goals would make the system better if they were included, however I did not expect to have the time to implement them. If more time was spent developing this project, these features would be a great addition:</p>
         <ul>
-            <li>Hub case. It would have been good to design, model and 3D print a case for the microcontroller system. Not only would this make the system feel more polished, but it would also be necessary for the system to be protected and waterproof if it were to become an actual product.</li>
-            <li>Extra sensors. Adding more sensors to the hubs would allow for more comprehensive data on plant conditions. For example, adding a humidity and temperature sensor could provide extra insight.</li>
-            <li>Alternate power source. Currently the system is powered by a USB directly, but if the product were in use, it may be more convenient if the power source were battery powered or chargeable, so that it could be placed somewhere that does not require a plug socket nearby.</li>
-            <li>Website hosting. The website is only run locally at the moment, but to become used in the real world, it should be hosted online.</li>
-            <li>Plant identification. Sometimes people don't know what species their plant is, which would make it difficult for the website to know the needs of the plant. Adding a plant identification feature would solve this, as the user would be able to look up their plant.</li>
-            <li>Calendar integration. Adding calendar integration would allow for watering schedules and reminders to be shown on user's personal calendars or phone notifications. This would be much more convenient than having to sign into the website to check schedules every time.</li>
-            <li>API call limit. There was a call limit on the API I was using. If this system were scaled up with multiple users, higher call rates would need to be subscribed to.</li>
-            <li>Sensor unreliability. Sensors are not always reliable, which is a problem when trying to obtain accurate readings. For example, the soil moisture sensor could be affected by the soil type, meaning it may not register the level of moisture correctly between different plants. This could be solved by adding a calibration option.</li>
+            <li><b>Hub case -</b> It would have been good to design, model and 3D print a case for the microcontroller system. Not only would this make the system feel more polished, but it would also be necessary for the system to be protected and waterproof if it were to become an actual product.</li>
+            <li><b>Extra sensors -</b> Adding more sensors to the hubs would allow for more comprehensive data on plant conditions. For example, adding a humidity and temperature sensor could provide extra insight.</li>
+            <li><b>Alternate power source -</b> Currently the system is powered by a USB directly, but if the product were in use, it may be more convenient if the power source were battery powered or chargeable, so that it could be placed somewhere that does not require a plug socket nearby.</li>
+            <li><b>Website hosting -</b> The website is only run locally at the moment, but to become used in the real world, it should be hosted online.</li>
+            <li><b>Plant identification -</b> Sometimes people don't know what species their plant is, which would make it difficult for the website to know the needs of the plant. Adding a plant identification feature would solve this, as the user would be able to look up their plant.</li>
+            <li><b>Calendar integration -</b> Adding calendar integration would allow for watering schedules and reminders to be shown on user's personal calendars or phone notifications. This would be much more convenient than having to sign into the website to check schedules every time.</li>
+            <li><b>API call limit -</b> There was a call limit on the API I was using. If this system were scaled up with multiple users, higher call rates would need to be subscribed to.</li>
+            <li><b>Sensor unreliability -</b> Sensors are not always reliable, which is a problem when trying to obtain accurate readings. For example, the soil moisture sensor could be affected by the soil type, meaning it may not register the level of moisture correctly between different plants. This could be solved by adding a calibration option.</li>
         </ul>
         <h2>Links</h2>
         <ul>
