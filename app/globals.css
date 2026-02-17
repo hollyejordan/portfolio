@@ -96,6 +96,7 @@ p, ul {
 .button:hover {
     background: var(--secondary-colour);
     box-shadow: none;
+    cursor: pointer;
 }
 
 .thinBorderBox {
