@@ -20,7 +20,7 @@
     "arduino-experiment-portfolio": {
         "title":"Arduino Experiments Portfolio",
         "date":"May 2024",
-        "description":"description",
+        "description":"A collection of Arduino experiments, with a larger final project based around monitoring a plant.",
         "thumbnail":"/experiments-thumbnail-16-9.jpg"
     }
 }
