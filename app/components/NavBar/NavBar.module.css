@@ -25,15 +25,18 @@
     padding-top: 12px;
 }
 
-@media (min-width: 540px) {
-
+@media (min-width: 480) {
+    
     .navbar {
         font-size: var(--small-font);
     }
-
     .navbar * {
         padding: var(--spacing);
     }
+}
+
+@media (min-width: 540px) {
+
 
     .intro {
         margin-bottom: 100px;
