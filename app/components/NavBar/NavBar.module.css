@@ -4,7 +4,7 @@
     justify-content: center;
     background-color: var(--primary-colour);
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-    padding: 6px;
+    /* padding: 6px; */
 }
 
 .navbar {
@@ -17,13 +17,13 @@
 .navbar * {
     text-decoration: none;
     color: white;
-    padding: var(--spacing) var(--small-spacing);
+    padding: var(--large-spacing) var(--small-spacing);
     transition: 0.2s;
 }
 
 .navbar a:hover {
     background: var(--secondary-colour);
-    padding-top: 12px;
+    padding-top: 20px;
 }
 
 @media (min-width: 480) {
@@ -38,6 +38,11 @@
     .navbar * {
         padding: var(--spacing);
     }
+
+    .navbar a:hover {
+    background: var(--secondary-colour);
+    padding-top: 12px;
+}
 }
 
 @media (min-width: 540px) {
